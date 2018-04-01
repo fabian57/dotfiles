@@ -1,0 +1,88 @@
+// vim:ts=4:sw=4:et
+{
+  // splith split container with 2 children
+  "border": "normal",
+  "floating": "auto_off",
+  "layout": "splitv",
+  "percent": 0.5,
+  "type": "con",
+  "nodes": [
+    {
+        "border": "normal",
+        "current_border_width": 2,
+        "floating": "auto_off",
+        "geometry": {
+           "height": 524,
+           "width": 820,
+           "x": 0,
+           "y": 0
+        },
+        "name": "ncmpcpp",
+        "percent": 0.5,
+        "swallows": [
+           {
+            "class": "^URxvt$",
+            "instance": "^ncmpcpp\\-main$",
+            //"title": "^ncmpcpp\\ 0\\.8\\.1$",
+            "transient_for": "^$"
+           }
+        ],
+        "type": "con"
+    },
+
+    {
+        // splith split container with 2 children
+        "border": "normal",
+        "floating": "auto_off",
+        "layout": "splith",
+        "percent": 0.5,
+        "type": "con",
+        "nodes": [
+            {
+                "border": "normal",
+                "current_border_width": 2,
+                "floating": "auto_off",
+                "geometry": {
+                   "height": 524,
+                   "width": 820,
+                   "x": 0,
+                   "y": 0
+                },
+                "name": "ncmpcpp",
+                "percent": 0.5,
+                "swallows": [
+                   {
+                    "class": "^URxvt$",
+                    "instance": "^ncmpcpp\\-visualizer$",
+                    //"title": "^ncmpcpp\\ 0\\.8\\.1$",
+                    "transient_for": "^$"
+                   }
+                ],
+                "type": "con"
+            },
+            {
+                "border": "normal",
+                "current_border_width": 2,
+                "floating": "auto_off",
+                "geometry": {
+                   "height": 524,
+                   "width": 820,
+                   "x": 0,
+                   "y": 0
+                },
+                "name": "ncmpcpp",
+                "percent": 0.5,
+                "swallows": [
+                   {
+                    "class": "^URxvt$",
+                    "instance": "^ncmpcpp\\-playlist$",
+                    //"title": "^ncmpcpp\\ 0\\.8\\.1$",
+                    "transient_for": "^$"
+                   }
+                ],
+                "type": "con"
+            }
+        ]
+    }
+  ]
+}
