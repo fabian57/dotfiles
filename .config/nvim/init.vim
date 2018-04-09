@@ -134,3 +134,6 @@ nmap <leader>t <C-w>s<C-w>j :terminal<CR>:res 10<CR>i
 nmap <Tab> :bnext<CR>
 nmap <S-Tab> :bprevious<CR>
 tnoremap <Esc> <C-\><C-n>
+
+" Compile rmarkdown file into pdf and refresh mupdf 
+autocmd Filetype rmd map <F5> :!echo<space>"require(rmarkdown);<space>render('<c-r>%')"<space>\|<space>R<space>--vanilla &> /dev/null; pkill -HUP mupdf<enter>
