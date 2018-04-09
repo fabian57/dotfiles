@@ -85,6 +85,7 @@ let NerdTreeShowHidden=1
 let g:airline_powerline_fonts=1
 let g:airline_section_z=' %{strftime("%-I:%M %p")}'
 let g:airline_section_warning=''
+let g:airline#extensions#tabline#enabled=1
 
 " Deoplete
 set runtimepath+=~/.local/share/nvim/plugged/deoplete.nvim/
@@ -92,16 +93,15 @@ let g:deoplete#enable_at_startup=1
 " Disable documentation window
 set completeopt-=preview
 
-" Neomake
+" Supertab
+let g:SuperTabDefaultCompletionType="<C-n>"
 
 " indentLine
 let g:indentLine_char='▏'
 let g:indentLine_color_gui='#f0f0f0'
 
-
 " TagBar
 let g:tagbar_width=30
-
 
 
 """ Filetype-Specific Configurations
@@ -125,7 +125,6 @@ endfunction
 """ Keybindings
 " Set up leaders
 let mapleader=","
-let maplocalleader="\\"
 nmap <leader>q :NERDTreeToggle<CR>
 "nmap <leader>w :TagbarToggle<CR>
 "nmap \ <leader>q<leader>w
