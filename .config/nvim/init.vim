@@ -19,7 +19,8 @@ Plug 'tpope/vim-fugitive'
 " Vim defaults
 Plug 'tpope/vim-sensible'
 " Displays tags in a window
-Plug 'majutsushi/tagbar'
+" Stopped working the very next day I installed it... Why? What did I do to anger you?
+"Plug 'majutsushi/tagbar'
 " Filetree
 Plug 'scrooloose/nerdtree'
 " Autocomplete
@@ -126,7 +127,8 @@ endfunction
 let mapleader=","
 let maplocalleader="\\"
 nmap <leader>q :NERDTreeToggle<CR>
-nmap <leader>w :TagbarToggle<CR>
+"nmap <leader>w :TagbarToggle<CR>
+"nmap \ <leader>q<leader>w
 nnoremap <C-b> :w<CR>:Neomake<CR>
 nmap <leader>r :so ~/.config/nvim/init.vim<CR>
 nmap <leader>t <C-w>s<C-w>j :terminal<CR>:res 10<CR>i
