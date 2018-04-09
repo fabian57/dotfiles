@@ -237,3 +237,6 @@ exec compton
 exec setxkbmap de
 exec mpd ~/.config/mpd/mpd.conf
 exec xrdb ~/.Xresources
+exec xset s 3600 3600
+exec xset dpms 0 0 0
+exec xautolock -time 5 -locker .config/i3/i3lock.sh -detectsleep
