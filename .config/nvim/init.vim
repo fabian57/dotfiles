@@ -28,7 +28,10 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'zchee/deoplete-jedi'
 Plug 'zchee/deoplete-clang'
 Plug 'zchee/deoplete-zsh'
-Plug 'zchee/deoplete-docker'
+Plug 'modille/deoplete-docker'
+Plug 'HerringtonDarkholme/yats.vim'
+Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
+"Plug 'zchee/deoplete-docker'
 " Linting and make tool
 Plug 'benekastah/neomake'
 " Completion with Tab
@@ -72,6 +75,8 @@ highlight LineNr guibg=NONE ctermbg=NONE
 set shiftwidth=4 tabstop=4 softtabstop=4 expandtab autoindent
 set laststatus=2
 set updatetime=500
+set number
+set relativenumber
 
 
 
@@ -90,6 +95,7 @@ let g:airline#extensions#tabline#enabled=1
 " Deoplete
 set runtimepath+=~/.local/share/nvim/plugged/deoplete.nvim/
 let g:deoplete#enable_at_startup=1
+let g:nvim_typescript#vue_support=1
 " Disable documentation window
 set completeopt-=preview
 
@@ -136,4 +142,7 @@ nmap <S-Tab> :bprevious<CR>
 tnoremap <Esc> <C-\><C-n>
 
 " Compile rmarkdown file into pdf and refresh mupdf 
-autocmd Filetype rmd map <F5> :!echo<space>"require(rmarkdown);<space>render('<c-r>%')"<space>\|<space>R<space>--vanilla &> /dev/null; pkill -HUP mupdf<enter>
+autocmd Filetype rmd map <F5> :!echo<space>"require(rmarkdown);<space>render('<c-r>%', 'pdf_document')"<space>\|<space>R<space>--vanilla &> /dev/null; pkill -HUP mupdf<enter><enter>
+
+" Compile simple cpp files and run them
+autocmd Filetype cpp map <F5> :!g++ % -o %:r; ./%:r 

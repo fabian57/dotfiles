@@ -94,4 +94,6 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
+alias vi="nvim"
+alias PacSyyu="sudo pacman -Syyu"
+alias PacS="sudo pacman -S"
