@@ -95,5 +95,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias vi="nvim"
-alias PacSyyu="sudo pacman -Syyu"
+alias PacSyu="sudo pacman -Syu"
 alias PacS="sudo pacman -S"
+alias renet="sudo netctl restart ethernet-dhcp"
